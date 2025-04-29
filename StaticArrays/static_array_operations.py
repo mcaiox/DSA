@@ -1,34 +1,36 @@
-class StaticArray:
-    def __init__(self, capacity):
-        self.arr = [0] * capacity
-        self.capacity = capacity
-        self.size = 0
+from typing import List
 
-    def insertEnd(self, n):
+class StaticArray:
+    def __init__(self, capacity: int):
+        self.arr: List[int] = [0] * capacity
+        self.capacity: int = capacity
+        self.size: int = 0
+
+    def insertEnd(self, n:int)->None:
         if self.size < self.capacity:
             self.arr[self.size] = n
             self.size += 1
 
-    def removeEnd(self):
+    def removeEnd(self)->None:
         if self.size > 0:
             self.arr[self.size - 1] = 0
             self.size -= 1
 
-    def insertMiddle(self, i, n):
+    def insertMiddle(self, i:int, n:int)->None:
         if self.size < self.capacity and i <= self.size:
             for index in range(self.size - 1, i - 1, -1):
                 self.arr[index + 1] = self.arr[index]
             self.arr[i] = n
             self.size += 1
 
-    def removeMiddle(self, i):
+    def removeMiddle(self, i:int)->None:
         if i < self.size:
             for index in range(i + 1, self.size):
                 self.arr[index - 1] = self.arr[index]
             self.arr[self.size - 1] = 0
             self.size -= 1
 
-    def printArr(self):
+    def printArr(self)->None:
         for i in range(self.size):
             print(self.arr[i])
 

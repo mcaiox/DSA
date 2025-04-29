@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StaticArrayProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1782435dffc84fd81a7f5d191f03f51feed8aea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94635dc456fd09bf510b70b1fbed882042af8fb0")]
 [assembly: System.Reflection.AssemblyProductAttribute("StaticArrayProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StaticArrayProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

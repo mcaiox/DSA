@@ -1,17 +1,23 @@
 public class Solution {
-    public List<List<string>> GroupAnagrams(string[] strs) {
+    public List<List<string>> GroupAnagrams(string[] inputStrings) {
+        // This will look like this:
+        // {
+        //     "1,0,1,0,...,0": ["eat", "tea", "ate"],
+        //     "0,0,0,0,...,1": ["tan", "nat"],
+        //     "1,1,0,0,...,0": ["bat"]
+        // }
         Dictionary<string, List<string>> res = new Dictionary <string, List<string>>();
-        foreach (var s in strs){
-            int[] count = new int[26]; // a ... z
-            foreach (char c in s){
-                count[c - 'a']++;
+        foreach (var currentString in inputStrings){
+            int[] letterFrequency = new int[26]; // a ... z
+            foreach (char c in currentString){
+                letterFrequency[c - 'a']++;
             }
-            // converts count array to a string
-            string key = string.Join(",", count);  // [1,0,1,0,...,0] → "1,0,1,0,...,0".
+            // converts letterFrequency array to a string
+            string key = string.Join(",", letterFrequency);  // [1,0,1,0,...,0] → "1,0,1,0,...,0".
             if (!res.ContainsKey(key)){
                 res[key] = new List<string>();
             }
-            res[key].Add(s);
+            res[key].Add(currentString);
         }
         return res.Values.ToList<List<string>>(); 
 

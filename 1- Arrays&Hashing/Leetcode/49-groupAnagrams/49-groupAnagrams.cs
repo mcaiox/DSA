@@ -13,7 +13,7 @@ public class Solution {
                 letterFrequency[c - 'a']++;
             }
             // converts letterFrequency array to a string
-            string key = string.Join(",", letterFrequency);  // [1,0,1,0,...,0] → "1,0,1,0,...,0".
+            string key = string.Join(",", letterFrequency);  // converts array to string since keys need to be immutable in hashmaps[1,0,1,0,...,0] → "1,0,1,0,...,0".
             if (!res.ContainsKey(key)){
                 res[key] = new List<string>();
             }

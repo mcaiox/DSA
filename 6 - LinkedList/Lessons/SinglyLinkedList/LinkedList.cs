@@ -1,6 +1,6 @@
 public class ListNode {
-    int val;
-    ListNode Next;
+    public int val;
+    public ListNode Next;
 
     public ListNode(int val) {
         this.val = val;
@@ -53,7 +53,7 @@ public class SinglyLinkedList
         ListNode curr = head.Next;
         while (curr != null)
         {
-            Console.WriteLine (curr.Value + " -> ");
+            Console.WriteLine (curr.val + " -> ");
             curr = curr.Next;
         }
         Console.WriteLine("");

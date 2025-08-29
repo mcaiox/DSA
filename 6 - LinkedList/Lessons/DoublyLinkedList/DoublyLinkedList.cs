@@ -28,7 +28,7 @@ public class DoublyLinkedList{
         newNode.prev = head;
         newNode.next = head.next;
 
-        head.next.prev = newNode;
+        head.next!.prev = newNode;
         head.next = newNode;
     }
 
@@ -37,25 +37,25 @@ public class DoublyLinkedList{
         newNode.next = tail;
         newNode.prev = tail.prev;
 
-        tail.prev.next = newNode;
+        tail.prev!.next = newNode;
         tail.prev = newNode;
     }
 
     public void RemoveFront(){
-        head.next.next.prev = head;
-        head.next = head.next.next;
+        head.next!.next!.prev = head;
+        head.next = head.next!.next;
     }
 
     public void RemoveEnd(){
-        tail.prev.prev.next = tail;
-        tail.prev = tail.prev.prev;
+        tail.prev!.prev!.next = tail;
+        tail.prev = tail.prev!.prev;
     }
 
     public void Print(){
-        DoublyLinkedListNode curr = head.next;
+        DoublyLinkedListNode curr = head.next!;
         while (curr != tail){
             Console.Write(curr.val + " -> ");
-            curr = curr.next;
+            curr = curr.next!;
         }
         Console.WriteLine();
     }
